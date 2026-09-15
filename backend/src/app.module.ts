@@ -3,8 +3,6 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
 import { fileURLToPath } from 'url';
-import { AppController } from './app.controller.js';
-import { AppService } from './app.service.js';
 import { JobsModule } from './jobs/jobs.module.js';
 import { Job } from './jobs/job.entity.js';
 
@@ -24,7 +22,5 @@ const __dirname = fileURLToPath(new URL('.', import.meta.url));
     }),
     JobsModule,
   ],
-  controllers: [AppController],
-  providers: [AppService],
 })
 export class AppModule {}
