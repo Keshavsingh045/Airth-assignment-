@@ -1,0 +1,12 @@
+{
+  "name": "airth-assignment",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
