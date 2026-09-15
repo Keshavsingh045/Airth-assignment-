@@ -22,7 +22,8 @@ export function JobDashboard() {
   });
 
   useEffect(() => {
-    const eventSource = new EventSource('http://localhost:3000/jobs/stream');
+    const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
+    const eventSource = new EventSource(`${API_URL}/jobs/stream`);
     
     eventSource.onmessage = (event) => {
       try {
