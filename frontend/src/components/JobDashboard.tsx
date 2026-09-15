@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import { Play, CheckCircle, XCircle, Trash2, Plus, Clock, AlertCircle, Activity, Server, Database } from 'lucide-react';
+import { Play, CheckCircle, XCircle, Trash2, Plus, Clock, AlertCircle, Activity, Database } from 'lucide-react';
 import { api } from '../lib/api';
 import type { Job } from '../lib/api';
 import { Button } from './ui/button';
@@ -70,7 +70,7 @@ export function JobDashboard() {
       );
       return { previousJobs };
     },
-    onError: (err: any, newJob, context) => {
+    onError: (err: any, _newJob, context) => {
       queryClient.setQueryData(['jobs'], context?.previousJobs);
       if (err.response?.status === 409) {
         setErrorMsg('Conflict: Job status was modified by another user.');

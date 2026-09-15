@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { JobDashboard } from './components/JobDashboard';
 import { MouseTrailer } from './components/MouseTrailer';
