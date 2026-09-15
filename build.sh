@@ -13,6 +13,3 @@ echo "Building backend..."
 cd backend
 npm install
 npm run build
-
-echo "Starting production server..."
-npm run start:prod
