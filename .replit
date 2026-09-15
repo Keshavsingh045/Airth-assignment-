@@ -1,3 +1,4 @@
 ﻿deps = ["pkgs.nodejs_20"]
-build = "bash build.sh"
 run = "cd backend && npm run start:prod"
+[deployment]
+build = "bash build.sh"
